@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bullets/ParentBullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bullets/EnemyBullet1.gd" type="Script" id=2]
+
+[node name="EnemyBullet1" instance=ExtResource( 1 )]
+collision_layer = 4
+script = ExtResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_EnemyBullet1_body_entered"]
